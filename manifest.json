@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "ThePirateBay Virginizer",
+    "version": "1.0",
+    "description": "Make PirateBay.se safer to use by removing adult content",
+    "author": "Mehdiway",
+
+    "icons": {
+        "48" : "icon48.png",
+        "128" : "icon128.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["http://*.thepiratebay.se/*"],
+        "js": ["jquery.js", "piratebayVirginizer.js"],
+        "run_at": "document_end"
+    }],
+
+    "permissions": ["http://*.thepiratebay.se/*"]
+}
